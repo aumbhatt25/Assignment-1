@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?_cacheOverride=1671612847070">
 
     <title>Index</title>
 
@@ -13,7 +13,6 @@
         window.addEventListener('scroll',() => {
     
             if(document.documentElement.scrollTop > 150 && document.documentElement.scrollTop <= 1250){
-    
                 const element1 = document.querySelector('.navigationlist');
                 element1.style.backgroundColor = 'white';
                 const element2 = document.querySelectorAll('.link li a');
@@ -25,9 +24,7 @@
                 }
     
                 const element3 = document.querySelector('.logo img');
-                element3['src'] = "logo-active.png" ;
-               
-    
+                element3['src'] = "logo-active.png";
             }
             else if(document.documentElement.scrollTop > 1250)
             {
@@ -53,25 +50,64 @@
                 }
                 const elem3 = document.querySelector('.logo img');
                 elem3['src'] = "logo.png" ;
-               
+            }
+
+            if(document.documentElement.scrollTop > 200){
+                const element11 = document.querySelector('.drop');
+                element11.style.backgroundColor = 'white';
+                const element13 = document.querySelector('.logo2 img');
+                element13['src'] = "logo-active.png";
+            }
+            else{
+                const elem11 = document.querySelector('.drop');
+                elem11.style.backgroundColor = '';
+                const elem13 = document.querySelector('.logo2 img');
+                elem13['src'] = "logo.png" ;
             }
         }
         )
+        const eledropdown = document.getElementById('link2');
+        eledropdown.style.display='none';
+        function OnClick(){
+                const ele1dropdown = document.getElementById('link2');
+                ele1dropdown.style.display='flex';
+                const button2 = document.getElementById('bars');
+                button2.style.display='none';
+                const mainContainer = document.getElementsByClassName('main');
+                mainContainer[0].style.display = 'none';
+        }
+        function back()
+            {
+                const ele5dropdown = document.getElementById('link2');
+                ele5dropdown.style.display='none';
+                const button2 = document.getElementById('bars');
+                button2.style.display='flex';
+                const mainContainer = document.getElementsByClassName('main');
+                mainContainer[0].style.display = 'flex';
+            }
       </script>
     
 </head>
-<body>
+<body style="height: 100%;">
     <nav class="dropnav">
-            <div class="logo2"><img src="logo.png" alt="logo"></div>
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="droplink">
-                <li><a href="#">Intro</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
+        <div class="drop">
+            <div class="logo2" id="logo2">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="button2" onclick="OnClick()"><i id="bars" class="fa fa-bars" style="color: grey;"></i></div>
+        </div>
     </nav>
+    <div class="link2" id="link2">
+        <div class="links">
+            <a href="#">Intro</a>
+            <a href="#">Services</a>
+            <a href="#">Team</a>
+            <a href="#">Pricing</a>
+            <a class="active" href="#">Sign Up</a>
+        </div>
+        <div class="arrowbtn"><span class="arrow" onclick="back()"><i class="fa fa-arrow-up" style="color: white;"></i></span></div>
+    </div>
+
 
     <div class="main">
     <nav class="navbar">
@@ -138,7 +174,7 @@
         </ul>
     </div>
     <div class="services">
-        <h1 style="display: flex; justify-content: center; margin-top: 230px;">Services</h1>
+        <h1 style="display: flex; justify-content: center;">Services</h1>
         <p style="display: flex; justify-content: center; color: rgb(177, 177, 177);">Achieve the best results with our wide variety of training options!</p>
     </div>
 
@@ -146,19 +182,19 @@
         <div class="first" >
             <img src="heart-blue.png" alt="cardio" style="height: 40px; width: 40px; margin:35px; align-self: center;">
             <h3>Cardio Training</h3>
-            <p style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque prasent vel suspendisse.</p>
+            <p class="para" style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
             <img src="heart-blue.png" alt="cardio1" style="height:40px; width:40px; margin: 42px; display: none;">
         </div>
         <div class="second">
             <img src="guru-blue.png" alt="yoga" style="height: 40px; width: 40px; margin:42px;">
             <h3 style="align-self: center;">Yoga Pilates</h3>
-            <p style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque prasent vel suspendisse.</p>
+            <p class="para" style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
             <img src="guru-blue.png" alt="yoga1" style="height: 40px; width: 40px; margin:42px; display:none;">
         </div>
         <div class="third">
             <img src="weight-blue.png" alt="power" style="height: 40px; width: 40px; margin:42px;">
             <h3 >Power Training</h3>
-            <p style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque prasent vel suspendisse.</p>
+            <p class="para" style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
             <img src="weight-blue.png" alt="power1" style="height: 40px; width: 40px; margin:42px; display: none;">
         </div>
     </div>
