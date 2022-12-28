@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?_cacheOverride=1671612847070">
+
+    <title>Index</title>
+
+    <script type='text/javascript'>
+        window.addEventListener('scroll',() => {
+    
+            if(document.documentElement.scrollTop > 150 && document.documentElement.scrollTop <= 1250){
+                const element1 = document.querySelector('.navigationlist');
+                element1.style.backgroundColor = 'white';
+                const element2 = document.querySelectorAll('.link li a');
+    
+                for(let i=0;i<element2.length;i++){
+                    element2[i].style.color = 'grey';
+                    if(i==0)
+                    element2[i].style.color = 'rgb(0, 195, 255)';
+                }
+    
+                const element3 = document.querySelector('.logo img');
+                element3['src'] = "logo-active.png";
+            }
+            else if(document.documentElement.scrollTop > 1250)
+            {
+                const ele1 = document.querySelector('.navigationlist');
+                ele1.style.backgroundColor = 'white';
+                const ele2 = document.querySelectorAll('.link li a');
+    
+                for(let i=0;i<ele2.length;i++){
+                    ele2[i].style.color = 'grey';
+                    if(i==1)
+                    ele2[i].style.color = 'rgb(0, 195, 255)';
+                }
+    
+                const ele3 = document.querySelector('.logo img');
+                ele3['src'] = "logo-active.png" ;
+            }
+            else{
+                const elem1 = document.querySelector('.navigationlist');
+                elem1.style.backgroundColor = '';
+                const elem2 = document.querySelectorAll('.link li a');
+                for(let i=0;i<elem2.length;i++){
+                    elem2[i].style.color = '';
+                }
+                const elem3 = document.querySelector('.logo img');
+                elem3['src'] = "logo.png" ;
+            }
+
+            if(document.documentElement.scrollTop > 200){
+                const element11 = document.querySelector('.drop');
+                element11.style.backgroundColor = 'white';
+                const element13 = document.querySelector('.logo2 img');
+                element13['src'] = "logo-active.png";
+            }
+            else{
+                const elem11 = document.querySelector('.drop');
+                elem11.style.backgroundColor = '';
+                const elem13 = document.querySelector('.logo2 img');
+                elem13['src'] = "logo.png";
+            }
+        }
+        )
+        function OnClick(){
+                const ele1dropdown = document.getElementById('mylink2');
+                ele1dropdown.style.display='flex';
+                const button2 = document.getElementById('bars');
+                button2.style.display='none';
+                const mainContainer = document.getElementsByClassName('main');
+                mainContainer[0].style.display = 'none';
+        }
+        function back()
+            {
+                const ele5dropdown = document.getElementById('mylink2');
+                ele5dropdown.style.display='none';
+                const button2 = document.getElementById('bars');
+                button2.style.display='flex';
+                const mainContainer = document.getElementsByClassName('main');
+                mainContainer[0].style.display = 'flex';
+            }
+      </script>
+    
+</head>
+<body style="height: 100%;">
+    <nav class="dropnav">
+        <div class="drop">
+            <div class="logo2" id="logo2">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="button2" onclick="OnClick()"><i id="bars" class="fa fa-bars" style="color: grey;"></i></div>
+        </div>
+    </nav>
+    <div class="link2" id="mylink2" style="display: none;">
+        <div class="links">
+            <a href="#intro">Intro</a>
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#pricing">Pricing</a>
+            <a class="active" href="#">Sign Up</a>
+        </div>
+        <div class="arrowbtn" onclick="back()"><span class="arrow"><i class="fa fa-arrow-up" style="color: white;"></i></span></div>
+    </div>
+
+
+    <div class="main">
+    <nav class="navbar">
+        <ul class="navigationlist">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="link">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><button class="btn">Sign Up</button></li>
+            </div>           
+        </ul>
+    </nav>
+    <div class="text">
+        <h2 class="p1" id="intro">Take care of your body.</h2>
+        <p class="p2" style="font-size: 56px;"><b>It's the only place you have to live. </b></p>
+    </div>
+        <div id="tables">
+            <div class="table1" id="t1">
+                <div class="imgc1">
+                    <img src="table-1.jpg" alt="table1">
+                    <div class="tbl1">
+                        <table>
+                            <tr style="height: 115px; width: 370px;">
+                                <th style="width: 251px; display: flex; align-self: flex-start; margin-top: 8px; margin-left: 5px;">Today's Schedule</th>
+                                <th style="font-size: 32px; padding-bottom: 90px; padding-left: 12px;">&#9642; &#9643; &#9643;</th>
+                            </tr>
+                            <tr>
+                                <td class="t1d">Early Exercise</td>
+                                <td>8:30 - 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="t1d">Muscle Building</td>
+                                <td>8:30 - 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="t1d">Cardio</td>
+                                <td>8:30 - 10:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="table2" id="t2">
+                <div class="imgc2">
+                    <img src="table-2.jpg" alt="table2">
+                    <div class="tbl2">
+                        <h3><b>Premium Membership</b></h3>
+                        <h2>Register Today</h2>
+                        <h2>20% Discount</h2>
+                    </div>
+                </div></div>
+            <div class="table3" id="t3">
+                <div class="imgc3">
+                    <img src="table-3.jpg" alt="table3">
+                    <div class="tbl3">
+                        <h3>Happy Clients</h3>
+                        <h3 style="font-size: 32px; margin-top:-112px; margin-left: 280px;">&#9642; &#9643; &#9643;</h3>
+                        <h2 style="width: 292px; margin-top: -80px;">I couldn't be more happy with the results!</h2>
+                        <p style="margin-top: -50px;">Adam Jordan</p>
+                    </div>
+                </div></div>
+        </ul>
+    </div>
+    <div class="services" id="services">
+        <h1 style="display: flex; justify-content: center;">Services</h1>
+        <p style="display: flex; justify-content: center; color: rgb(177, 177, 177);">Achieve the best results with our wide variety of training options!</p>
+    </div>
+
+    <div class="training">
+        <div class="first" >
+            <img src="heart-blue.png" alt="cardio" style="height: 40px; width: 40px; margin:35px; align-self: center;">
+            <h3>Cardio Training</h3>
+            <p class="para" style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+            <img src="heart-blue.png" alt="cardio1" style="height:40px; width:40px; margin: 42px; display: none;">
+        </div>
+        <div class="second">
+            <img src="guru-blue.png" alt="yoga" style="height: 40px; width: 40px; margin:42px;">
+            <h3 style="align-self: center;">Yoga Pilates</h3>
+            <p class="para" style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+            <img src="guru-blue.png" alt="yoga1" style="height: 40px; width: 40px; margin:42px; display:none;">
+        </div>
+        <div class="third">
+            <img src="weight-blue.png" alt="power" style="height: 40px; width: 40px; margin:42px;">
+            <h3 >Power Training</h3>
+            <p class="para" style="display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+            <img src="weight-blue.png" alt="power1" style="height: 40px; width: 40px; margin:42px; display: none;">
+        </div>
+    </div>
+    <div class="grey"></div>
+</div>
+</body>
+</html>
